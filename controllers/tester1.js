@@ -46,15 +46,15 @@ export const sendissue = async (req, res) => {
     console.log(finalMessage);
 
     // const sender = sender_email;
-    const sender = 'souravmishra110@gmail.com';
+    const sender = ['souravmishra110@gmail.com', 'skillshaastr@gmail.com'];
 
     // emailLogic(sender, finalMessage);
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
-      to: sender, // Change to your recipient
+      to: sender[1], // Change to your recipient
       from: 'raphaelstryker110@gmail.com', // Change to your verified sender
-      subject: 'Sending with SendGrid is Fun',
+      subject: 'Query from skillshaashtr',
       text: 'and easy to do anywhere, even with Node.js',
       html: finalMessage,
     }
